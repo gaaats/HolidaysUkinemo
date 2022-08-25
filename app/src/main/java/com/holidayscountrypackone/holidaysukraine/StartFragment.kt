@@ -1,16 +1,13 @@
-package com.excercisegenpackone.excercisegenbiceps
+package com.holidayscountrypackone.holidaysukraine
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
-import com.excercisegenpackone.excercisegenbiceps.databinding.FragmentStartBinding
-import kotlinx.coroutines.launch
+import com.holidayscountrypackone.holidaysukraine.databinding.FragmentStartBinding
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

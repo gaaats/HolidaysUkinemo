@@ -1,4 +1,4 @@
-package com.excercisegenpackone.excercisegenbiceps
+package com.holidayscountrypackone.holidaysukraine
 
 import org.junit.Test
 

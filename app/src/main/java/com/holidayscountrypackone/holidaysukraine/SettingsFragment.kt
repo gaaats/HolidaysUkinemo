@@ -1,11 +1,11 @@
-package com.excercisegenpackone.excercisegenbiceps
+package com.holidayscountrypackone.holidaysukraine
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.excercisegenpackone.excercisegenbiceps.databinding.FragmentSettingsBinding
+import com.holidayscountrypackone.holidaysukraine.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
 

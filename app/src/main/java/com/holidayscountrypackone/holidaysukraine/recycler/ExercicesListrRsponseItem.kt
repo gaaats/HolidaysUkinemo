@@ -1,4 +1,4 @@
-package com.excercisegenpackone.excercisegenbiceps.recycler
+package com.holidayscountrypackone.holidaysukraine.recycler
 
 
 import com.google.gson.annotations.SerializedName

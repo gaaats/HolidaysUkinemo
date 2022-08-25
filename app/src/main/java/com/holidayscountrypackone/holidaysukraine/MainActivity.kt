@@ -1,10 +1,10 @@
-package com.excercisegenpackone.excercisegenbiceps
+package com.holidayscountrypackone.holidaysukraine
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
-import com.excercisegenpackone.excercisegenbiceps.databinding.ActivityMainBinding
+import com.holidayscountrypackone.holidaysukraine.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

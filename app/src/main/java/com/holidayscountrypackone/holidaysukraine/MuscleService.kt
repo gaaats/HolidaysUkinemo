@@ -1,6 +1,7 @@
-package com.excercisegenpackone.excercisegenbiceps
+package com.holidayscountrypackone.holidaysukraine
 
-import com.excercisegenpackone.excercisegenbiceps.recycler.ExercicesListrRsponse
+import com.holidayscountrypackone.holidaysukraine.entity.ListHolidays
+import com.holidayscountrypackone.holidaysukraine.recycler.ExercicesListrRsponse
 import okhttp3.Interceptor
 import retrofit2.Response
 import retrofit2.http.GET
@@ -11,14 +12,21 @@ interface MuscleService {
     companion object {
         const val BASE_URL = "https://api.api-ninjas.com/v1/"
         const val API_KEY = BuildConfig.API_KEY
-        const val MUSCLE_GROUP = "biceps"
+        const val COUNTRY = "Ukraine"
+        const val YEAR = "2021"
     }
 
 
     @GET("exercises")
     suspend fun getExercises(
-        @Query("muscle") muscle: String = MUSCLE_GROUP,
+        @Query("muscle") muscle: String = COUNTRY,
     ): Response<ExercicesListrRsponse>
+
+    @GET("holidays")
+    suspend fun getHolidays(
+        @Query("country") country : String = COUNTRY,
+        @Query("year") year : String = YEAR,
+    ): Response<ListHolidays>
 
 
 }

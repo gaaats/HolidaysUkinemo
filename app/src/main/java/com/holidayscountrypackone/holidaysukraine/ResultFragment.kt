@@ -1,34 +1,29 @@
-package com.excercisegenpackone.excercisegenbiceps
+package com.holidayscountrypackone.holidaysukraine
 
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.excercisegenpackone.excercisegenbiceps.databinding.FragmentResultBinding
-import com.excercisegenpackone.excercisegenbiceps.recycler.ExerciseItem
-import com.excercisegenpackone.excercisegenbiceps.recycler.ExerciseListAdapter
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.Dispatchers
+import com.holidayscountrypackone.holidaysukraine.databinding.FragmentResultBinding
+import com.holidayscountrypackone.holidaysukraine.entity.HolideyItemUI
+import com.holidayscountrypackone.holidaysukraine.recycler.HolidaysListAdapter
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ResultFragment : Fragment() {
 
-    private var list = mutableListOf<ExerciseItem>()
+    private var list = mutableListOf<HolideyItemUI>()
 
     private val adapter by lazy {
-        ExerciseListAdapter()
+        HolidaysListAdapter()
     }
 
     private val retrofit by lazy {
@@ -62,14 +57,9 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-        try {
-            loadList()
-            addVertAndHorDividers()
-            initProgBar()
-        } catch (e: Exception) {
-            snackBarError()
-        }
-
+        loadList()
+        addVertAndHorDividers()
+        initProgBar()
 
         binding.btnCopy.setOnClickListener {
             try {
@@ -79,7 +69,7 @@ class ResultFragment : Fragment() {
             }
         }
         binding.btnImgExit.setOnClickListener {
-            requireActivity().onBackPressed()
+            initAlertDialog()
         }
 
         super.onViewCreated(view, savedInstanceState)
@@ -88,21 +78,13 @@ class ResultFragment : Fragment() {
     private fun loadList() {
         lifecycleScope.launch {
             try {
-                val result = api.getExercises()
+                val result = api.getHolidays()
                 if (result.isSuccessful) {
-                    Log.d("test_tag", "good")
-
-                    result.body()?.forEach {
-                        Log.d("test_tag", "name ${it.name}")
-                        Log.d("test_tag", "name ${it.equipment}")
-                    }
-
                     list = result.body()!!.map {
                         it.mapToUiModel()
                     }.toMutableList()
                     adapter.submitList(list)
                     binding.recyclerView.adapter = adapter
-
 
                 } else {
                     snackBarError()
@@ -119,19 +101,21 @@ class ResultFragment : Fragment() {
             "There is some error, try again",
             Snackbar.LENGTH_LONG
         ).show()
+        requireActivity().onBackPressed()
     }
 
     private fun initProgBar() {
         lifecycleScope.launch {
             binding.imgMain.visibility = View.GONE
+            binding.cardV.visibility = View.GONE
             binding.btnCopy.visibility = View.GONE
             binding.recyclerView.visibility = View.GONE
             binding.btnImgExit.visibility = View.GONE
-            delay(2000)
+            delay(3000)
             binding.lottieAnimVaiting.visibility = View.VISIBLE
             binding.tvPleaseVaitLoading.visibility = View.VISIBLE
-
             binding.imgMain.visibility = View.VISIBLE
+            binding.cardV.visibility = View.VISIBLE
             binding.recyclerView.visibility = View.VISIBLE
             binding.btnCopy.visibility = View.VISIBLE
             binding.btnImgExit.visibility = View.VISIBLE
@@ -156,5 +140,19 @@ class ResultFragment : Fragment() {
                 DividerItemDecoration.VERTICAL
             )
         )
+    }
+
+    private fun initAlertDialog() {
+        AlertDialog.Builder(requireContext())
+            .setTitle("Exit")
+            .setMessage("Are you definitely want to log out, the current data will not be saved?")
+            .setPositiveButton("Yes, Exit") { _, _ ->
+                requireActivity().onBackPressed()
+            }
+            .setNegativeButton("Deny") { _, _ ->
+            }
+            .setCancelable(true)
+            .create()
+            .show()
     }
 }
