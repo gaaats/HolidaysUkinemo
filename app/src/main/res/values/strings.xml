@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Holidays Ukraine</string>
+    <string name="app_name">Holidays Poland</string>
     <string name="loading">Loading...</string>
     <string name="here_will_be_your_pass">here will be your password...\n Just press GENERATE</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -8,12 +8,8 @@
     <string name="settings_text">settings</string>
     <string name="text_about">Create strong passwords with keywords from your favorite movie to protect your accounts.</string>
     <string name="music">music</string>
-    <string name="text_activity_good">Ukraine, country located in eastern Europe, the second largest on the continent after Russia. The capital is Kyiv, located on the Dnieper River in north-central Ukraine.
-
-Ukraine
-Ukraine
-Encyclopædia Britannica, Inc.
-A fully independent Ukraine emerged only late in the 20th century, after long periods of successive domination by Poland-Lithuania, Russia, and the Union of Soviet Socialist Republics (U.S.S.R.). Ukraine is bordered by Belarus to the north, Russia to the east, the Sea of Azov and the Black Sea to the south, Moldova and Romania to the southwest, and Hungary, Slovakia, and Poland to the west. In the far southeast, Ukraine is separated from Russia by the Kerch Strait, which connects the Sea of Azov to the Black Sea.</string>
+    <string name="vibration">vibration</string>
+    <string name="text_activity_good">Poland, officially the Republic of Poland, is a country in Central Europe. It is divided into 16 administrative provinces called voivodeships, covering an area of 312,696 km2 (120,733 sq mi). Poland has a population of over 38 million and is the fifth-most populous member state of the European Union.\n\nPolands territory extends from the Baltic Sea in the north to the Sudeten and Carpathian Mountains in the south. The country is bordered by Lithuania and Russia to the northeast,[d] Belarus and Ukraine to the east, Slovakia and the Czech Republic to the south, and Germany to the west. Poland also shares maritime boundaries with Denmark and Sweden.</string>
     <string name="about"><u>about</u></string>
 
     <string-array name="diff_levels">
