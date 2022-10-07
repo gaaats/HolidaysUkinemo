@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/main_colour_"
     android:layout_height="match_parent"
+    android:background="@color/main_colour_"
     tools:context=".SplashScreenActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.80" />
-
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -62,50 +61,51 @@
         android:id="@+id/img_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_20"
-        app:layout_constraintTop_toTopOf="@id/guideline_hor_30"
+        android:src="@drawable/logo"
+        app:layout_constraintDimensionRatio="1,1"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_80"
-        android:src="@drawable/main_logo"
-        app:layout_constraintDimensionRatio="1,1" />
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_20"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_30" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_anim_progress"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintDimensionRatio="1,2"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_20"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_80"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_20"
         app:layout_constraintTop_toBottomOf="@id/img_logo"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/splash" />
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/prog_bar_splash_scrn"-->
-<!--        style="?android:attr/progressBarStyleHorizontal"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_height="10dp"-->
-<!--        android:progressDrawable="@drawable/custom_prog_bar"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/guideline_vert_70"-->
-<!--        app:layout_constraintStart_toStartOf="@id/guideline_vert_30"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/img_logo"-->
-<!--        tools:progress="30" />-->
+    <ProgressBar
+        android:id="@+id/prog_bar_splash_scrn"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="32dp"
+        android:progressDrawable="@drawable/custom_prog_bar"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_70"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_30"
+        app:layout_constraintTop_toBottomOf="@id/img_logo"
+        tools:progress="30" />
 
 
-<!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--        android:id="@+id/tv_loading"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:textSize="11sp"-->
-<!--        android:fontFamily="@font/jost_bold"-->
-<!--        android:gravity="center"-->
-<!--        android:paddingTop="8dp"-->
-<!--        android:text="@string/loading"-->
-<!--        android:textColor="@color/black"-->
-<!--        app:fontFamily="@font/montserrat_black"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/guideline_vert_70"-->
-<!--        app:layout_constraintStart_toStartOf="@id/guideline_vert_30"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/prog_bar_splash_scrn" />-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_loading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jost_bold"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:fontFamily="@font/montserrat_black"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_70"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_30"
+        app:layout_constraintTop_toBottomOf="@id/prog_bar_splash_scrn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

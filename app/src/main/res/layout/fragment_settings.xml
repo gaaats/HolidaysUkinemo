@@ -23,6 +23,13 @@
         app:layout_constraintGuide_percent="0.10" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,11 +59,26 @@
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.50" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vert_95"
@@ -129,7 +151,7 @@
         android:id="@+id/tv_title_about_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/about"
@@ -137,7 +159,7 @@
         android:textColor="@color/add_colour_the_most_dark"
         android:textSize="20sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@id/tv_about_game_text"
+        app:layout_constraintTop_toBottomOf="@id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -163,14 +185,44 @@
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
         android:autoSizeTextType="uniform"
+        android:ellipsize="end"
         android:gravity="center"
+        android:maxLines="17"
         android:text="@string/text_activity_good"
         android:textColor="@color/add_colour_the_most_dark"
         android:textSize="16sp"
         android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_about_title"
         app:layout_constraintBottom_toBottomOf="@id/guideline_hor_95"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_05" />
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/tv_title_play_game"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:gravity="center"-->
+<!--        android:fontFamily="@font/jost_italic"-->
+<!--        android:text="* play little game"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textSize="11sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/lottie_play_game" />-->
+
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/lottie_play_game"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/guideline_hor_80"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        app:lottie_loop="true"-->
+<!--        app:lottie_rawRes="@raw/play" />-->
 
     <SeekBar
         android:id="@+id/seekBar"

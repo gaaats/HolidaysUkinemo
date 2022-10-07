@@ -1,19 +1,21 @@
 <resources>
-    <string name="app_name">Marigold Holidays Germany</string>
+    <string name="app_name">Ukinemo</string>
     <string name="loading">Loading...</string>
     <string name="here_will_be_your_pass">here will be your password...\n Just press GENERATE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="generate">generate</string>
     <string name="settings_text">settings</string>
-    <string name="text_about">Create strong passwords with keywords from your favorite movie to protect your accounts.</string>
+    <string name="text_about">Create strong passwords with keywords to protect your accounts.</string>
     <string name="music">music</string>
     <string name="vibration">vibration</string>
-    <string name="text_activity_good">Germany, officially the Federal Republic of Germany, is a country in Central Europe. It is the second most populous country in Europe after Russia, and the most populous member state of the European Union. Germany is situated between the Baltic and North seas to the north, and the Alps to the south; it covers an area of 357,022 square kilometres (137,847 sq mi), with a population of almost 84 million within its 16 constituent states. Germany borders Denmark to the north, Poland and the Czech Republic to the east, Austria and Switzerland to the south, and France, Luxembourg, Belgium, and the Netherlands to the west. The nations capital and largest city is Berlin and its financial centre is Frankfurt; the largest urban area is the Ruhr.</string>
+    <string name="text_activity_good">Ukraine is a unitary republic under a semi-presidential system and a developing country, ranking 77th on the Human Development Index. Ukraine is the poorest country in Europe by nominal GDP per capita,[17] and has high levels of corruption.[18][19] However, due to its extensive fertile land, pre-war Ukraine was one of the largest grain exporters in the world.[20][21] It is a founding member of the United Nations, as well as a member of the Council of Europe, the World Trade Organization, and the OSCE, and is in the process of joining the European Union and becoming a NATO member.</string>
     <string name="about"><u>about</u></string>
+    <string name="name_country">ukraine</string>
+    <string name="about_country">Ukraine greatly benefited from the Soviet emphasis on physical education. These policies left Ukraine with hundreds of stadia, swimming pools, gymnasia and many other athletic facilities.[380] The most popular sport is football. The top professional league is the Vyscha Liha.</string>
 
     <string-array name="diff_levels">
-      <item>NATIONAL HOLIDAY</item>
+        <item>NATIONAL HOLIDAY</item>
         <item>SEASON</item>
         <item>STATE HOLIDAY</item>
         <item>OPTIONAL HOLIDAY</item>

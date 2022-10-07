@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ap_nav"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/enterFragment">
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.holidayscountrypacksecond.holidaygermany.StartFragment"
+        android:name="com.holpackartukii.holidayartukinemo.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.holidayscountrypacksecond.holidaygermany.ResultFragment"
+        android:name="com.holpackartukii.holidayartukinemo.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
@@ -38,10 +38,72 @@
             app:launchSingleTop="false"
             app:popEnterAnim="@anim/from_right"
             app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_resultFragment_to_detailFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:destination="@id/detailFragment">
+        </action>
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.holidayscountrypacksecond.holidaygermany.SettingsFragment"
+        android:name="com.holpackartukii.holidayartukinemo.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.holpackartukii.holidayartukinemo.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_resultFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="holiday"
+            app:argType="com.holpackartukii.holidayartukinemo.entity.HolideyItemUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="com.holpackartukii.holidayartukinemo.EnterFragment"
+        android:label="fragment_enter"
+        tools:layout="@layout/fragment_enter" >
+        <action
+            android:id="@+id/action_enterFragment_to_nevsFragment"
+            app:destination="@id/nevsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_enterFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_enterFragment_to_startFragment"
+            app:destination="@id/startFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nevsFragment"
+        android:name="com.holpackartukii.holidayartukinemo.NevsFragment"
+        android:label="fragment_nevs"
+        tools:layout="@layout/fragment_nevs" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.holpackartukii.holidayartukinemo.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

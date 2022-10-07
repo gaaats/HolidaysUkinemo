@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_colour_"
+    android:layout_height="match_parent"
+    tools:context=".NevsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/btn_img_exit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_10"
+        app:layout_constraintDimensionRatio="1,1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_country"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/montserrat_black"
+        android:gravity="center"
+        android:text="UKraine"
+        android:textAllCaps="true"
+        android:textColor="@color/add_colour_the_most_dark"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_10"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_v"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/main_colour_"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_95"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_country">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_nevs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/main_colour_"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/btn_copy"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/img_main"
+        tools:listitem="@layout/nevs_single_item" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_anim_load_nevs"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/load"
+        tools:visibility="invisible" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

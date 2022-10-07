@@ -43,6 +43,13 @@
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vert_05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +60,7 @@
         android:id="@+id/img_main_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/main_logo"
+        android:src="@drawable/logo"
         app:layout_constraintDimensionRatio="1,1"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_05"

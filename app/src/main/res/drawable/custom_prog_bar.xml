@@ -4,7 +4,7 @@
     <item android:id="@+id/backgrovnd_prog">
         <shape android:shape="rectangle">
             <corners android:radius="18dp" />
-            <solid android:color="@color/prog_bar_grey" />
+            <solid android:color="@color/add_colour_the_most_dark" />
         </shape>
     </item>
 
@@ -12,8 +12,8 @@
         <scale android:scaleWidth="100%">
             <shape android:shape="rectangle">
                 <corners android:radius="18dp" />
-                <gradient android:startColor="@color/prog_bar_start_colour"
-                    android:endColor="#8D2502"
+                <gradient android:startColor="@color/add_colour_not_like_main_darker"
+                    android:endColor="@color/add_colour_not_like_main_2"
                     android:type="linear"/>
             </shape>
         </scale>

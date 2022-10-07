@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_colour_"
+    tools:context=".DetailFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/btn_img_exit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_10"
+        app:layout_constraintDimensionRatio="1,1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_country"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/montserrat_black"
+        android:gravity="center"
+        android:text="@string/name_country"
+        android:textAllCaps="true"
+        android:textColor="@color/add_colour_the_most_dark"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_10"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_85"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_flag"
+        android:layout_width="0dp"
+        android:padding="48dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/flag"
+        app:layout_constraintDimensionRatio="1,1"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_country" />
+
+    <TextView
+        android:id="@+id/tv_holiday_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textColor="@color/add_colour_the_most_dark"
+        android:textSize="26sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/img_flag"
+        tools:text="name of holiday" />
+
+
+    <TextView
+        android:id="@+id/tv_holiday_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:gravity="center"
+        android:textColor="@color/add_colour_the_most_dark"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/tv_holiday_name"
+        tools:text="14.05.1994" />
+
+    <TextView
+        android:id="@+id/tv_helper_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/tv_day"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05"
+        app:layout_constraintTop_toBottomOf="@id/tv_holiday_date"
+        android:text="In 2022, will be observed in: "/>
+
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/add_colour_the_most_dark"
+        android:textSize="16sp"
+        android:layout_marginStart="4dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toEndOf="@id/tv_helper_day"
+        app:layout_constraintTop_toTopOf="@id/tv_helper_day"
+        app:layout_constraintBottom_toBottomOf="@id/tv_helper_day"
+        tools:text="Friday" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/montserrat_black"
+        android:paddingStart="70dp"
+        android:paddingEnd="60dp"
+        android:text="Read more"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_baseline_info_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
