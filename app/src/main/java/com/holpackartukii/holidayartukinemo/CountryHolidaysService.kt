@@ -13,6 +13,7 @@ interface CountryHolidaysService {
         const val API_KEY = BuildConfig.API_KEY
         const val COUNTRY = "italy"
         const val YEAR = "2021"
+        const val name = "fake"
     }
 
     @GET("holidays")
