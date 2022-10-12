@@ -34,6 +34,7 @@ class AboutFragment : Fragment() {
         binding.btnOk.setOnClickListener {
             requireActivity().onBackPressed()
         }
+        binding.circleInd.setViewPager(binding.pager)
 
         super.onViewCreated(view, savedInstanceState)
     }

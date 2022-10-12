@@ -36,6 +36,9 @@ class EnterFragment : Fragment() {
         binding.btnInterestingFacts.setOnClickListener {
             findNavController().navigate(R.id.aboutFragment)
         }
+        binding.btnSettings.setOnClickListener {
+            findNavController().navigate(R.id.action_enterFragment_to_settingsFragment)
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 
